@@ -14,5 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $name = 'Boolean';
+    return view('home',compact('name'));
+});
+
+Route::get('/contact', function () {
+    $contact = '147896';
+    return view('contact', compact('contact'));
+});
+
+Route::get('/blog', function () {
+    
+    return view('blog');
 });
